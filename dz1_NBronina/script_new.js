@@ -1,8 +1,9 @@
 ﻿/**
  *Выполнение первого задания по преобразованию кода для совтировки задания. Программа работает не совсем корректно.
  *Неправильно считываются данные их формы. Например, массив [1, 33, 65, 3, 5, 6] будет отсортирован не правильно,
- *тогда как массив [1, 7, 8, 3, 5, 6] отсортируется верно. Не могли бы вы посказать, как исправить мой код.
+ *тогда как массив [1, 7, 8, 3, 5, 6] отсортируется верно.
 */
+/*jslint browser: true, devel: true */
 function sIncrease(i, ii) {
     "use strict";
     var returnval;
@@ -28,10 +29,8 @@ function sDecrease(i, ii) {
     return returnval;
 }
 function validForm(x) {
-				//Ex: arr=[1 33 65 3 5 6];
     "use strict";
     var value, arr, count, i, j, max;
-    /*global document */
     value = document.getElementById('mass').value;
     value = value.replace(/,/g, '');
     value = value.replace(/;/g, '');
@@ -51,11 +50,9 @@ function validForm(x) {
         }
     }
     if (x === 'up') {
-        /*global alert */
         alert(arr);
     }
     if (x === 'down') {
-        /*global alert */
         alert(arr.sort(sDecrease));
     }
 }
